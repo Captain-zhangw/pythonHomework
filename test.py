@@ -1,6 +1,8 @@
 from mypackage import painting
 
 encodings = 'UTF-8'
+
+# 将带音调的字母转换为不带音调的字母的字典表
 translator = {'ā': 'a', 'á': 'a', 'ǎ': 'a', 'à': 'a',
               'ō': 'o', 'ó': 'o', 'ǒ': 'o', 'ò': 'o',
               'ē': 'e', 'é': 'e', 'ě': 'e', 'è': 'e',
@@ -10,9 +12,11 @@ translator = {'ā': 'a', 'á': 'a', 'ǎ': 'a', 'à': 'a',
               }
 
 
+# 函数实现的功能为将带音调的字母转换为不带音调的字母
 def translate(trans):
     temp = ''
     for i in trans:
+        # 判断ascii码
         if (97 <= ord(i) <= 122) or (65 <= ord(i) <= 90):
             temp = temp + i
         else:
@@ -25,10 +29,13 @@ def translate(trans):
 
 class chengyu:
     def __init__(self, han, pinyin):
+        # 存储的是汉字
         self.han = han
+        # 存储的是拼音
         self.pinyin = pinyin
-        self.vis = False
+        # 存储的是第一个字的拼音
         self.head = translate(pinyin[0])
+        # 存储的是最后一个字的拼音
         self.tail = translate(pinyin[-1])
 
 
@@ -38,8 +45,10 @@ Dragon = []
 res = {}
 vis = {}
 for i in range(0, len(chengyulist)):
+    # 将成语按照汉字和拼音存入类中
     Dragon.append(chengyu(chengyulist[i][0][1:len(chengyulist[i][0])], chengyulist[i][1][0:-1].split(' ')))
 for i in Dragon:
+    # 将头拼音相同的成语保存到同一个字典里
     if i.head in res:
         res[i.head].append(i)
     else:
@@ -47,21 +56,70 @@ for i in Dragon:
 temp = res['fen']
 paintlist = ['玉石俱焚']
 for i in range(0, 9):
-    for i in temp:
-        if i.han not in vis:
-            paintlist.append(i.han)
-            temp = res[i.tail]
-            vis[i.han] = True
+    # 以下为判断此成语是否使用过
+    for j in temp:
+        if j.han not in vis:
+            paintlist.append(j.han)
+            temp = res[j.tail]
+            vis[j.han] = True
             break
 painting.paint()
 painting.setpos(painting.window_width() / 2 - 100, painting.window_height() / 2 - 100)
 j = 0
 painting.color('black')
-
+# 以下开始在画布上接龙成语
 for i in paintlist:
     painting.goto(painting.window_width() / 2 - 100, painting.window_height() / 2 - 100 - j * 30)
     painting.write(i, align='left', font=('宋体', 15))
     j += 1
 x = painting.xcor()
 y = painting.ycor()
+# 以下开始写学号姓名和班级
+painting.goto(x, y - 100)
+painting.write('张尉', align='left', font=('宋体', 15))
+painting.goto(x, y - 130)
+painting.write('计201', align='left', font=('宋体', 15))
+painting.goto(x, y - 160)
+painting.write('42024048', align='left', font=('宋体', 15))
+# 以下绘制条形码
+x = painting.xcor() - 55
+y = painting.ycor() - 5
+
+txmwidth = 50
+
+
+def jiaoyan(x):
+    painting.pencolor('black')
+    painting.penup()
+    painting.goto(x + 3, y)
+    painting.pendown()
+    painting.forward(txmwidth + 10)
+    painting.penup()
+    painting.goto(x + 9, y)
+    painting.pendown()
+    painting.forward(txmwidth + 10)
+
+
+painting.tracer(True)
+painting.speed(5)
+numberlist = ['0100011', '0010011', '0001101', '0010011', '0011101', '0100111', '0011101', '0001001']
+painting.setheading(270)
+painting.pensize(2)
+jiaoyan(x)
+x = x + 9
+count = 2
+count2 = 0
+for i in numberlist:
+    for j in range(0, len(i)):
+        if i[j] == '1':
+            painting.penup()
+            painting.goto(x + count, y)
+            painting.pendown()
+            painting.forward(txmwidth)
+        count += 2
+    count2 += 1
+    if (count2 == 4):
+        jiaoyan(x + count)
+        x += 9
+jiaoyan(x + count)
 painting.done()
