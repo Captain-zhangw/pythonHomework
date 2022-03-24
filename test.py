@@ -20,7 +20,7 @@ def translate(trans):
         else:
             try:
                 temp = temp + translator[i]
-            except KeyError as e:
+            except KeyError:
                 print('There is a KeyError!Maybe the chengyu.txt have illegal char')
     return temp
 
@@ -37,5 +37,12 @@ class chengyu:
 chengyutxt = open('./chengyu.txt', 'r', encoding='UTF-8')
 chengyulist = [i.split(' ==> ') for i in chengyutxt.readlines()]
 Dragon = []
-for i in range(0, 190):
+res = {}
+for i in range(0, len(chengyulist)):
     Dragon.append(chengyu(chengyulist[i][0][1:len(chengyulist[i][0])], chengyulist[i][1][0:-1].split(' ')))
+for i in Dragon:
+    if i.head in res:
+        res[i.head].append(i.han)
+    else:
+        res[i.head] = [i.han]
+print(res['fen'])
