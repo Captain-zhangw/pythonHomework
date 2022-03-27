@@ -54,8 +54,8 @@ for i in Dragon:
     else:
         res[i.head] = [i]
 temp = res['shan']
-paintlist = ['与人为善']
-for i in range(0, 9):
+paintlist = ['缘木求鱼', '与人为善']
+for i in range(1, 10):
     # 以下为判断此成语是否使用过
     for j in temp:
         if j.han not in vis and j.han[0] != paintlist[i][-1]:
@@ -69,11 +69,14 @@ j = 0
 painting.color('black')
 # 以下开始在画布上接龙成语
 for i in paintlist:
-    painting.goto(painting.window_width() / 2 - 100, painting.window_height() / 2 - 100 - j * 30)
+    painting.goto(painting.window_width() / 2 - 100, painting.window_height() / 2 - 30 - j * 30)
     painting.write(i, align='left', font=('宋体', 15))
     j += 1
 x = painting.xcor()
 y = painting.ycor()
+painting.goto(x, y - 30)
+painting.write('接龙完成', align='left', font=('宋体', 15))
+y = y - 50
 # 以下开始写学号姓名和班级
 painting.goto(x, y - 60)
 painting.write('张尉', align='left', font=('宋体', 15))
