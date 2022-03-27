@@ -53,12 +53,12 @@ for i in Dragon:
         res[i.head].append(i)
     else:
         res[i.head] = [i]
-temp = res['fen']
-paintlist = ['玉石俱焚']
+temp = res['shan']
+paintlist = ['与人为善']
 for i in range(0, 9):
     # 以下为判断此成语是否使用过
     for j in temp:
-        if j.han not in vis:
+        if j.han not in vis and j.han[0] != paintlist[i][-1]:
             paintlist.append(j.han)
             temp = res[j.tail]
             vis[j.han] = True
@@ -75,38 +75,21 @@ for i in paintlist:
 x = painting.xcor()
 y = painting.ycor()
 # 以下开始写学号姓名和班级
-painting.goto(x, y - 100)
+painting.goto(x, y - 60)
 painting.write('张尉', align='left', font=('宋体', 15))
-painting.goto(x, y - 130)
+painting.goto(x, y - 90)
 painting.write('计201', align='left', font=('宋体', 15))
-painting.goto(x, y - 160)
+painting.goto(x, y - 120)
 painting.write('42024048', align='left', font=('宋体', 15))
 # 以下绘制条形码
-x = painting.xcor() - 55
-y = painting.ycor() - 5
+x = painting.xcor() - 70
+y = painting.ycor() - 15
 
 txmwidth = 50
 
-
-def jiaoyan(x):
-    painting.pencolor('black')
-    painting.penup()
-    painting.goto(x + 3, y)
-    painting.pendown()
-    painting.forward(txmwidth + 10)
-    painting.penup()
-    painting.goto(x + 9, y)
-    painting.pendown()
-    painting.forward(txmwidth + 10)
-
-
-painting.tracer(True)
-painting.speed(5)
-numberlist = ['0100011', '0010011', '0001101', '0010011', '0011101', '0100111', '0011101', '0001001']
+numberlist = ['110100111', '0010110111', '0001100110011011', '00010100011101110110110111010001100011101011']
 painting.setheading(270)
 painting.pensize(2)
-jiaoyan(x)
-x = x + 9
 count = 2
 count2 = 0
 for i in numberlist:
@@ -118,8 +101,8 @@ for i in numberlist:
             painting.forward(txmwidth)
         count += 2
     count2 += 1
-    if (count2 == 4):
-        jiaoyan(x + count)
-        x += 9
-jiaoyan(x + count)
+painting.penup()
+painting.goto(x + 50, y - txmwidth - 25)
+painting.pendown()
+painting.write("42024048", align='left', font=('宋体', 15))
 painting.done()
