@@ -7,10 +7,9 @@ from openpyxl.utils import get_column_letter
 n = int(input("请输入皇后个数:(建议输入数值在11及以下)\n"))
 
 # 递归解决N皇后问题并且把分布结果存储在res数组中
-row = [False] * (n + 1)
 column = [False] * (n + 1)
-dig = [False] * 2 * (n + 1)
-dig2 = [False] * 2 * (n + 1)
+diag = [False] * 2 * (n + 1)
+diag2 = [False] * 2 * (n + 1)
 res = []
 pres = [0] * (n + 1)
 
@@ -20,15 +19,15 @@ def function(n, k):
         res.append(pres.copy())
         return
     for i in range(1, n + 1):
-        if column[i] is False and dig[k - i + n] is False and dig2[i + k] is False:
+        if column[i] is False and diag[k - i + n] is False and diag2[i + k] is False:
             column[i] = True
-            dig[k - i + n] = True
-            dig2[i + k] = True
+            diag[k - i + n] = True
+            diag2[i + k] = True
             pres[k] = i
             function(n, k + 1)
             column[i] = False
-            dig[k - i + n] = False
-            dig2[i + k] = False
+            diag[k - i + n] = False
+            diag2[i + k] = False
     return
 
 
