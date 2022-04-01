@@ -2,6 +2,12 @@
 
 ---
 
+## 安装库需要
+
+需要安装`openpyxl`，指令：
+
+`pip install openpyxl`
+
 ## 开发流程
 
 ### 一、解决N皇后问题
