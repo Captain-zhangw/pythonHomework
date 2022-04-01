@@ -40,9 +40,9 @@
 
 ## 程序效果截图
 
-![image-20220401115004600](./image\image-1.png)
+![image-20220401115004600](./image/image-1.png)
 
-![image-20220401115049505](./image\image-2.png)
+![image-20220401115049505](./image/image-2.png)
 
 
 
