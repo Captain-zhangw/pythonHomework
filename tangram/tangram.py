@@ -1,8 +1,25 @@
+import os
+
 from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QVBoxLayout, QPushButton, QGraphicsView, QGraphicsScene, \
-    QGraphicsPolygonItem
-from PyQt5.QtGui import QPainter, QPolygon, QPen, QColor, QBrush, QPolygonF
-from PyQt5.QtCore import QPointF, QRectF, Qt
+    QGraphicsPolygonItem, QFileDialog, QMessageBox
+from PyQt5.QtGui import QPen, QColor, QBrush, QPolygonF, QMouseEvent, QPainter, QFont, QPixmap
+from PyQt5.QtCore import QPointF, Qt, QRectF
 import sys
+
+
+class PushButton(QPushButton):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setStyleSheet("QPushButton{background-color:"
+                           "#f5f6fa;color:#2f3640;"
+                           "font-size:15pt'微软雅黑';border-radius:15px;"
+                           "border-style:solid;border-width:2px;"
+                           "padding:8px;}"
+                           "QPushButton::hover{	color: #FFFFFF;"
+                           "background-color: #718093;border-color: #2f3640;}"
+                           "QPushButton::pressed,QPushButton::checked{color: #FFFFFF;"
+                           "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #273c75, stop:1 #487eb0);}"
+                           )
 
 
 class GraphicsPolygonItem(QGraphicsPolygonItem):
@@ -49,6 +66,15 @@ class GraphicsScene(QGraphicsScene):
 class Tangram(QWidget):
     def __init__(self):
         super().__init__()
+        self.scene = GraphicsScene()
+        self.view = QGraphicsView()
+        self.brush1 = QBrush(QColor(0, 255, 255))
+        self.brush2 = QBrush(QColor(255, 0, 0))
+        self.brush3 = QBrush(QColor(255, 0, 255))
+        self.brush4 = QBrush(QColor(0, 255, 0))
+        self.brush5 = QBrush(QColor(128, 128, 255))
+        self.brush6 = QBrush(QColor(255, 255, 0))
+        self.brush7 = QBrush(QColor(255, 128, 68))
         self.initUI()
 
     def initUI(self):
@@ -59,29 +85,29 @@ class Tangram(QWidget):
         self.addTangram()
 
     def addButton(self):
-        button1 = QPushButton("OK")
-        button2 = QPushButton("cancel")
-        button1.clicked.connect(self.buttonOKClicked)
-        button2.clicked.connect(self.buttonCancelClicked)
+        button1 = PushButton("读取格式")
+        button2 = PushButton("保存格式")
+        button3 = PushButton("保存图片")
+        button1.clicked.connect(self.buttonReadClicked)
+        button2.clicked.connect(self.buttonSaveClicked)
+        button3.clicked.connect(self.buttonImgClicked)
         hbox = QHBoxLayout()
-        hbox.addStretch(1)
-        hbox.addWidget(button1)
-        hbox.addWidget(button2)
         vbox = QVBoxLayout()
+        vbox.addStretch(3)
+        vbox.addWidget(button1)
         vbox.addStretch(1)
-        vbox.addLayout(hbox)
-        self.setLayout(vbox)
+        vbox.addWidget(button2)
+        vbox.addStretch(1)
+        vbox.addWidget(button3)
+        vbox.addStretch(3)
+        hbox.addStretch(1)
+        hbox.addLayout(vbox)
+        self.setLayout(hbox)
 
     def addTangram(self):
         scene = GraphicsScene(self)
+        self.scene = scene
         # 刷子颜色
-        brush1 = QBrush(QColor(0, 255, 255))
-        brush2 = QBrush(QColor(255, 0, 0))
-        brush3 = QBrush(QColor(255, 0, 255))
-        brush4 = QBrush(QColor(0, 255, 0))
-        brush5 = QBrush(QColor(128, 128, 255))
-        brush6 = QBrush(QColor(255, 255, 0))
-        brush7 = QBrush(QColor(255, 128, 68))
         # 创建图形W
         rect = QPolygonF([QPointF(0, 0), QPointF(0, 70.5), QPointF(70.5, 70.5), QPointF(70.5, 0)])
         points = [QPointF(50, 0), QPointF(0, 50), QPointF(100, 50)]
@@ -102,13 +128,13 @@ class Tangram(QWidget):
         item5 = GraphicsPolygonItem(triangle5)
         item6 = GraphicsPolygonItem(trapezoid)
         item7 = GraphicsPolygonItem(rect)
-        item1.setBrush(brush1)
-        item2.setBrush(brush2)
-        item3.setBrush(brush3)
-        item4.setBrush(brush4)
-        item5.setBrush(brush5)
-        item6.setBrush(brush6)
-        item7.setBrush(brush7)
+        item1.setBrush(self.brush1)
+        item2.setBrush(self.brush2)
+        item3.setBrush(self.brush3)
+        item4.setBrush(self.brush4)
+        item5.setBrush(self.brush5)
+        item6.setBrush(self.brush6)
+        item7.setBrush(self.brush7)
         item1.setData(0, "triangle1")
         item2.setData(0, "triangle2")
         item3.setData(0, "triangle3")
@@ -136,27 +162,113 @@ class Tangram(QWidget):
         # 将scene添加到view
         scene.setSceneRect(self.width() - 200, self.height(), 0, 0)
         view = QGraphicsView(scene, self)
+        self.view = view
         view.resize(self.width() - 200, self.height())
         view.show()
+
+    def closeEvent(self, a0) -> None:
+
+        close_sure = QMessageBox(self)
+        close_sure.setWindowTitle("提示")
+        close_sure.setText("确定要退出吗？,退出之前记得保存哦！")
+        btn1 = QPushButton("确定")
+        btn2 = QPushButton("取消")
+        close_sure.addButton(btn1, QMessageBox.YesRole)
+        close_sure.addButton(btn2, QMessageBox.NoRole)
+        close_sure.setDefaultButton(btn2)
+        close_sure.setIcon(QMessageBox.Question)
+        close_sure.exec_()
+        if close_sure.clickedButton() == btn1:
+            a0.accept()
+        else:
+            a0.ignore()
+
+    def buttonReadClicked(self):
+        file_name = QFileDialog.getOpenFileNames(self, '打开文件', './', '*.txt')
+        try:
+            if file_name[0]:
+                saved_txt = open(str(file_name[0][0]), 'r', encoding='utf-8')
+                mes = saved_txt.readlines()
+                pos_mes = mes[::2]
+                pos_mes_x = []
+                pos_mes_y = []
+                for i in pos_mes:
+                    pos_mes_x.append(i.split(" ")[0])
+                    pos_mes_y.append(i.split(" ")[1][:-1])
+                rotation_mes = mes[1::2]
+                for i in range(0, len(rotation_mes)):
+                    rotation_mes[i] = rotation_mes[i][:-1]
+                for i, j in zip(range(0, len(self.scene.items())), range(0, len(self.scene.items()))):
+                    self.scene.items()[i].setPos(float(pos_mes_x[j]), float(pos_mes_y[j]))
+                    self.scene.items()[i].setRotation(float(rotation_mes[j]))
+                saved_txt.close()
+            else:
+                return
+        except:
+            print("wrong file format!")
+
+    def buttonSaveClicked(self):
+        init_filename = open("./save.txt", 'w')
+        init_filename.close()
+        file_name = QFileDialog.getSaveFileName(self, '保存文件', './', '文本文件(*.txt)', 'save')
+        if file_name[0]:
+            print(file_name[0])
+            save_txt = open(file_name[0], 'w+', encoding='UTF-8')
+            for i in self.scene.items():
+                save_txt.write(str(i.pos().x()) + ' ' + str(i.pos().y()) + '\n')
+                save_txt.write(str(i.rotation()) + '\n')
+            save_txt.close()
+
+    def buttonImgClicked(self):
+        rect = QGraphicsView.viewport(self.view).rect()
+        pixmap = QPixmap(rect.width(), rect.height())
+        painter = QPainter(pixmap)
+        painter.begin(pixmap)
+        self.view.render(painter, QRectF(pixmap.rect()), rect)
+        painter.end()
+        file_name = QFileDialog.getSaveFileName(self, '保存图片', './', '图片(*.png)')
+        if file_name[0]:
+            pixmap.save(file_name[0])
+
+
+class HelpWidget(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.initUI()
+        self.w = Tangram()
+
+    def initUI(self):
+        self.setFixedSize(1200, 800)
+        self.move(400, 100)
+        self.setWindowTitle('TangramHelp')
         self.show()
 
-    def buttonOKClicked(self):
-        print("i am pressed")
+    def mousePressEvent(self, a0: QMouseEvent) -> None:
+        if a0.button() == Qt.LeftButton:
+            print("I am pressed")
+            self.w.show()
+            self.close()
 
-    def buttonCancelClicked(self):
-        print("close")
-    # def paintEvent(self, e):
-    #     qp=QPainter()
-    #     qp.begin(self)
-    #     col = QColor(0, 0, 0)
-    #     qp.setBrush(QColor(200, 0, 0))
-    #     triangle=QPolygon()
-    #     triangle.setPoints(200,200,100,300,300,300)
-    #     qp.drawPolygon(triangle)
-    #     qp.end()
+    def paintEvent(self, a0) -> None:
+        painter = QPainter(self)
+        painter.setPen(QPen(Qt.black, 15, Qt.SolidLine))
+        painter.setFont(QFont("楷体", 30))
+        painter.drawText(0, 0, int(self.width()), int(self.height() / 2 - 100), Qt.AlignCenter, "欢迎来到Tangram——七巧板！")
+        painter.setFont(QFont("楷体", 20))
+        painter.drawText(0, 0, int(self.width()), int(self.height() / 2 + 200), Qt.AlignCenter, "下面让我来介绍一下七巧板的基本操作：")
+        painter.drawText(0, 0, int(self.width()), int(self.height() / 2 + 300), Qt.AlignCenter,
+                         "使用鼠标左键拖拽改变图形的位置，右键点击改变图形的旋转角度")
+        painter.drawText(0, 0, int(self.width()), int(self.height() / 2 + 400), Qt.AlignCenter,
+                         "右面有三个按钮，分别是：保存格式、读取格式、保存图像")
+        painter.drawText(0, 0, int(self.width()), int(self.height() / 2 + 500), Qt.AlignCenter,
+                         "以txt格式保存格式，读取格式，可以使你的七巧板读取到你之前保存的格式")
+        painter.drawText(0, 0, int(self.width()), int(self.height() / 2 + 600), Qt.AlignCenter, "保存图像，可以使你的七巧板保存到你的电脑中")
+        painter.setPen(QPen(Qt.red, 15, Qt.SolidLine))
+        painter.setFont(QFont("楷体", 25))
+        painter.drawText(0, 0, int(self.width()), int(self.height() / 2 + 800), Qt.AlignCenter, "左键点击屏幕，进入七巧板")
 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    w = Tangram()
+    HelpWidget = HelpWidget()
     sys.exit(app.exec_())
