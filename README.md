@@ -52,10 +52,6 @@ pip install pyqt5
 
 ---
 
-![image-20220412112102068](F:\学习\Python程序设计\code\image\1.png)
+![image-20220412112102068](./1.png)
 
-![image-20220412112140019](F:\学习\Python程序设计\code\image\2.png)
-
-![image-20220412112202776](C:\Users\Brezze\AppData\Roaming\Typora\typora-user-images\image-20220412112202776.png)
-
-![image-20220412112217768](C:\Users\Brezze\AppData\Roaming\Typora\typora-user-images\image-20220412112217768.png)
+![image-20220412112140019](./2.png)
