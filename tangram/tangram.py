@@ -1,5 +1,3 @@
-import os
-
 from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QVBoxLayout, QPushButton, QGraphicsView, QGraphicsScene, \
     QGraphicsPolygonItem, QFileDialog, QMessageBox
 from PyQt5.QtGui import QPen, QColor, QBrush, QPolygonF, QMouseEvent, QPainter, QFont, QPixmap
@@ -208,8 +206,6 @@ class Tangram(QWidget):
             print("wrong file format!")
 
     def buttonSaveClicked(self):
-        init_filename = open("./save.txt", 'w')
-        init_filename.close()
         file_name = QFileDialog.getSaveFileName(self, '保存文件', './', '文本文件(*.txt)', 'save')
         if file_name[0]:
             print(file_name[0])
