@@ -4,29 +4,36 @@
  <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
    <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>1068</width>
-    <height>794</height>
+       <x>0</x>
+       <y>0</y>
+       <width>1094</width>
+       <height>998</height>
    </rect>
   </property>
   <property name="font">
-   <font>
-    <pointsize>13</pointsize>
-   </font>
+      <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+      </font>
   </property>
-  <property name="windowTitle">
-   <string>作图工具</string>
-  </property>
-  <widget class="QWidget" name="centralwidget">
-   <property name="layoutDirection">
-    <enum>Qt::LeftToRight</enum>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_21">
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout_6">
-      <item>
-       <spacer name="verticalSpacer_3">
+     <property name="windowTitle">
+         <string>作图工具</string>
+     </property>
+     <property name="styleSheet">
+         <string notr="true">font: 16px &quot;Microsoft YaHei&quot;;</string>
+     </property>
+     <widget class="QWidget" name="centralwidget">
+         <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_21">
+             <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_6">
+                     <item>
+                         <spacer name="verticalSpacer_3">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
@@ -56,40 +63,209 @@
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
+           <property name="sizeHint" stdset="0">
+               <size>
+                   <width>20</width>
+                   <height>40</height>
+               </size>
+           </property>
        </spacer>
       </item>
-      <item>
-       <spacer name="verticalSpacer_12">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <spacer name="verticalSpacer_9">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
+                     <item>
+                         <spacer name="verticalSpacer_11">
+                             <property name="orientation">
+                                 <enum>Qt::Vertical</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>20</width>
+                                     <height>40</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                     <item>
+                         <spacer name="verticalSpacer_17">
+                             <property name="orientation">
+                                 <enum>Qt::Vertical</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>20</width>
+                                     <height>40</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                     <item>
+                         <spacer name="verticalSpacer_14">
+                             <property name="orientation">
+                                 <enum>Qt::Vertical</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>20</width>
+                                     <height>40</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                     <item>
+                         <spacer name="verticalSpacer_12">
+                             <property name="orientation">
+                                 <enum>Qt::Vertical</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>20</width>
+                                     <height>40</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                     <item>
+                         <spacer name="verticalSpacer_21">
+                             <property name="orientation">
+                                 <enum>Qt::Vertical</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>20</width>
+                                     <height>40</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                     <item>
+                         <spacer name="verticalSpacer_20">
+                             <property name="orientation">
+                                 <enum>Qt::Vertical</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>20</width>
+                                     <height>40</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                     <item>
+                         <spacer name="verticalSpacer_22">
+                             <property name="orientation">
+                                 <enum>Qt::Vertical</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>20</width>
+                                     <height>40</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                     <item>
+                         <spacer name="verticalSpacer_18">
+                             <property name="orientation">
+                                 <enum>Qt::Vertical</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>20</width>
+                                     <height>40</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                     <item>
+                         <spacer name="verticalSpacer_23">
+                             <property name="orientation">
+                                 <enum>Qt::Vertical</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>20</width>
+                                     <height>40</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                     <item>
+                         <spacer name="verticalSpacer_16">
+                             <property name="orientation">
+                                 <enum>Qt::Vertical</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>20</width>
+                                     <height>40</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                     <item>
+                         <spacer name="verticalSpacer_24">
+                             <property name="orientation">
+                                 <enum>Qt::Vertical</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>20</width>
+                                     <height>40</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                     <item>
+                         <spacer name="verticalSpacer_19">
+                             <property name="orientation">
+                                 <enum>Qt::Vertical</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>20</width>
+                                     <height>40</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                     <item>
+                         <spacer name="verticalSpacer_15">
+                             <property name="orientation">
+                                 <enum>Qt::Vertical</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>20</width>
+                                     <height>40</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                     <item>
+                         <spacer name="verticalSpacer_13">
+                             <property name="orientation">
+                                 <enum>Qt::Vertical</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>20</width>
+                                     <height>40</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                     <item>
+                         <spacer name="verticalSpacer_9">
+                             <property name="orientation">
+                                 <enum>Qt::Vertical</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>20</width>
+                                     <height>40</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
       <item>
        <spacer name="verticalSpacer_6">
         <property name="orientation">
@@ -110,9 +286,13 @@
           <item>
            <widget class="QCheckBox" name="titleCheckBox">
             <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
+                <font>
+                    <family>Microsoft YaHei</family>
+                    <pointsize>-1</pointsize>
+                    <weight>50</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
+                </font>
             </property>
             <property name="text">
              <string>标题名称</string>
@@ -145,9 +325,13 @@
                </size>
               </property>
               <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-               </font>
+                  <font>
+                      <family>Microsoft YaHei</family>
+                      <pointsize>-1</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                  </font>
               </property>
               <property name="text">
                <string>标题</string>
@@ -163,9 +347,13 @@
                </size>
               </property>
               <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-               </font>
+                  <font>
+                      <family>Microsoft YaHei</family>
+                      <pointsize>-1</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                  </font>
               </property>
               <property name="text">
                <string>清空</string>
@@ -229,51 +417,42 @@
               <item>
                <widget class="QLabel" name="xAxisLabel">
                 <property name="font">
-                 <font>
-                  <pointsize>12</pointsize>
-                 </font>
+                    <font>
+                        <family>Microsoft YaHei</family>
+                        <pointsize>-1</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                    </font>
                 </property>
                 <property name="text">
-                 <string>1-x轴数据</string>
+                    <string>1-x轴数据</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QTextEdit" name="xAxisData">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
                 <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>150</height>
-                 </size>
+                    <size>
+                        <width>90</width>
+                        <height>0</height>
+                    </size>
                 </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>80</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="focusPolicy">
-                 <enum>Qt::StrongFocus</enum>
-                </property>
-                <property name="autoFillBackground">
-                 <bool>false</bool>
-                </property>
-                <property name="html">
-                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-                  &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-                  p, li { white-space: pre-wrap; }
-                  &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:13pt;
-                  font-weight:400; font-style:normal;&quot;&gt;
-                  &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px;
-                  margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                 </string>
-                </property>
+                   <property name="maximumSize">
+                       <size>
+                           <width>110</width>
+                           <height>16777215</height>
+                       </size>
+                   </property>
+                   <property name="font">
+                       <font>
+                           <family>Microsoft YaHei</family>
+                           <pointsize>-1</pointsize>
+                           <weight>50</weight>
+                           <italic>false</italic>
+                           <bold>false</bold>
+                       </font>
+                   </property>
                </widget>
               </item>
              </layout>
@@ -283,12 +462,16 @@
               <item>
                <widget class="QLabel" name="yAxisLabel">
                 <property name="font">
-                 <font>
-                  <pointsize>12</pointsize>
-                 </font>
+                    <font>
+                        <family>Microsoft YaHei</family>
+                        <pointsize>-1</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                    </font>
                 </property>
                 <property name="text">
-                 <string>1-y轴数据</string>
+                    <string>1-y轴数据</string>
                 </property>
                </widget>
               </item>
@@ -304,17 +487,26 @@
                  </sizepolicy>
                 </property>
                 <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>0</height>
-                 </size>
+                    <size>
+                        <width>90</width>
+                        <height>0</height>
+                    </size>
                 </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>80</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
+                   <property name="maximumSize">
+                       <size>
+                           <width>110</width>
+                           <height>16777215</height>
+                       </size>
+                   </property>
+                   <property name="font">
+                       <font>
+                           <family>Microsoft YaHei</family>
+                           <pointsize>-1</pointsize>
+                           <weight>50</weight>
+                           <italic>false</italic>
+                           <bold>false</bold>
+                       </font>
+                   </property>
                </widget>
               </item>
              </layout>
@@ -324,35 +516,48 @@
               <item>
                <widget class="QLabel" name="x2AxisLabel">
                 <property name="font">
-                 <font>
-                  <pointsize>12</pointsize>
-                 </font>
+                    <font>
+                        <family>Microsoft YaHei</family>
+                        <pointsize>-1</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                    </font>
                 </property>
                 <property name="text">
-                 <string>2-x轴数据</string>
+                    <string>2-x轴数据</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QTextEdit" name="x2AxisData">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
+                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
                 </property>
                 <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>150</height>
-                 </size>
+                    <size>
+                        <width>90</width>
+                        <height>0</height>
+                    </size>
                 </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>80</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
+                   <property name="maximumSize">
+                       <size>
+                           <width>110</width>
+                           <height>16777215</height>
+                       </size>
+                   </property>
+                   <property name="font">
+                       <font>
+                           <family>Microsoft YaHei</family>
+                           <pointsize>-1</pointsize>
+                           <weight>50</weight>
+                           <italic>false</italic>
+                           <bold>false</bold>
+                       </font>
+                   </property>
                </widget>
               </item>
              </layout>
@@ -362,9 +567,13 @@
               <item>
                <widget class="QLabel" name="y2AxisLabel">
                 <property name="font">
-                 <font>
-                  <pointsize>12</pointsize>
-                 </font>
+                    <font>
+                        <family>Microsoft YaHei</family>
+                        <pointsize>-1</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                    </font>
                 </property>
                 <property name="text">
                  <string>2-y轴数据</string>
@@ -380,44 +589,42 @@
                  </sizepolicy>
                 </property>
                 <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>150</height>
-                 </size>
+                    <size>
+                        <width>90</width>
+                        <height>0</height>
+                    </size>
                 </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>80</width>
-                  <height>10000</height>
-                 </size>
-                </property>
+                   <property name="maximumSize">
+                       <size>
+                           <width>110</width>
+                           <height>10000</height>
+                       </size>
+                   </property>
+                   <property name="font">
+                       <font>
+                           <family>Microsoft YaHei</family>
+                           <pointsize>-1</pointsize>
+                           <weight>50</weight>
+                           <italic>false</italic>
+                           <bold>false</bold>
+                       </font>
+                   </property>
                </widget>
               </item>
              </layout>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_5">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
             </item>
             <item>
              <layout class="QVBoxLayout" name="verticalLayout_14">
               <item>
                <widget class="QCheckBox" name="legendCheckBox">
                 <property name="font">
-                 <font>
-                  <pointsize>12</pointsize>
-                  <weight>50</weight>
-                  <bold>false</bold>
-                 </font>
+                    <font>
+                        <family>Microsoft YaHei</family>
+                        <pointsize>-1</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                    </font>
                 </property>
                 <property name="text">
                  <string>图例</string>
@@ -440,9 +647,13 @@
               <item>
                <widget class="QLabel" name="data1LegendName">
                 <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                 </font>
+                    <font>
+                        <family>Microsoft YaHei</family>
+                        <pointsize>-1</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                    </font>
                 </property>
                 <property name="text">
                  <string>数据1图例名称</string>
@@ -468,9 +679,13 @@
               <item>
                <widget class="QLabel" name="data2LegendName">
                 <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                 </font>
+                    <font>
+                        <family>Microsoft YaHei</family>
+                        <pointsize>-1</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                    </font>
                 </property>
                 <property name="text">
                  <string>数据2图例名称</string>
@@ -482,38 +697,23 @@
               </item>
              </layout>
             </item>
-            <item>
-             <spacer name="horizontalSpacer_13">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
            </layout>
           </item>
           <item>
-           <widget class="QFrame" name="frame">
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_18">
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_16">
-               <item>
-                <widget class="QLabel" name="radioTitle">
-                 <property name="font">
-                  <font>
-                   <pointsize>12</pointsize>
-                  </font>
+              <widget class="QGroupBox" name="groupBox">
+                  <layout class="QVBoxLayout" name="verticalLayout_18">
+                      <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_16">
+                              <item>
+                                  <widget class="QLabel" name="radioTitle">
+                                      <property name="font">
+                                          <font>
+                                              <family>Microsoft YaHei</family>
+                                              <pointsize>-1</pointsize>
+                                              <weight>50</weight>
+                                              <italic>false</italic>
+                                              <bold>false</bold>
+                                          </font>
                  </property>
                  <property name="text">
                   <string>数据1标记形状：</string>
@@ -538,14 +738,18 @@
                 <widget class="QRadioButton" name="radiusRadio">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>90</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
                  <property name="text">
                   <string>实心圆</string>
@@ -559,14 +763,18 @@
                 <widget class="QRadioButton" name="triangleRadio">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>90</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
                  <property name="text">
                   <string>下三角</string>
@@ -580,14 +788,18 @@
                 <widget class="QRadioButton" name="rectRadio">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>90</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
                  <property name="text">
                   <string>正方形</string>
@@ -598,14 +810,18 @@
                 <widget class="QRadioButton" name="plusRadio">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>70</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
                  <property name="text">
                   <string>加号</string>
@@ -620,14 +836,18 @@
                 <widget class="QRadioButton" name="starRadio">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>70</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
                  <property name="text">
                   <string>星号</string>
@@ -638,14 +858,18 @@
                 <widget class="QRadioButton" name="mutiplyRadio">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>70</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
                  <property name="text">
                   <string>乘号</string>
@@ -656,14 +880,18 @@
                 <widget class="QRadioButton" name="rhombusRadio">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>70</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
                  <property name="text">
                   <string>菱形</string>
@@ -674,14 +902,18 @@
                 <widget class="QRadioButton" name="pentagonRadio">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>90</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
                  <property name="text">
                   <string>五边形</string>
@@ -693,23 +925,27 @@
             </layout>
            </widget>
           </item>
-          <item>
-           <widget class="QFrame" name="frame_2">
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_19">
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_17">
-               <item>
-                <widget class="QLabel" name="radioTitle_2">
-                 <property name="font">
-                  <font>
-                   <pointsize>12</pointsize>
-                  </font>
+                 <widget class="QGroupBox" name="groupBox_2">
+                     <property name="checkable">
+                         <bool>false</bool>
+                     </property>
+                     <property name="checked">
+                         <bool>false</bool>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_19">
+                         <item>
+                             <layout class="QHBoxLayout" name="horizontalLayout_17">
+                                 <item>
+                                     <widget class="QLabel" name="radioTitle_2">
+                                         <property name="font">
+                                             <font>
+                                                 <family>Microsoft YaHei</family>
+                                                 <pointsize>-1</pointsize>
+                                                 <weight>50</weight>
+                                                 <italic>false</italic>
+                                                 <bold>false</bold>
+                                             </font>
                  </property>
                  <property name="text">
                   <string>数据2标记形状：</string>
@@ -734,14 +970,18 @@
                 <widget class="QRadioButton" name="radiusRadio_3">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>90</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
                  <property name="text">
                   <string>实心圆</string>
@@ -755,14 +995,18 @@
                 <widget class="QRadioButton" name="triangleRadio_3">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>90</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
                  <property name="text">
                   <string>下三角</string>
@@ -776,14 +1020,18 @@
                 <widget class="QRadioButton" name="rectRadio_3">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>90</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
                  <property name="text">
                   <string>正方形</string>
@@ -794,14 +1042,18 @@
                 <widget class="QRadioButton" name="plusRadio_3">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>70</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
                  <property name="text">
                   <string>加号</string>
@@ -816,14 +1068,18 @@
                 <widget class="QRadioButton" name="starRadio_3">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>70</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
                  <property name="text">
                   <string>星号</string>
@@ -834,14 +1090,18 @@
                 <widget class="QRadioButton" name="mutiplyRadio_3">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>70</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
                  <property name="text">
                   <string>乘号</string>
@@ -852,14 +1112,18 @@
                 <widget class="QRadioButton" name="rhombusRadio_3">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>70</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
                  <property name="text">
                   <string>菱形</string>
@@ -870,95 +1134,100 @@
                 <widget class="QRadioButton" name="pentagonRadio_3">
                  <property name="maximumSize">
                   <size>
-                   <width>60</width>
+                      <width>90</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
+                     <font>
+                         <family>Microsoft YaHei</family>
+                         <pointsize>-1</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                     </font>
                  </property>
-                 <property name="text">
-                  <string>五边形</string>
-                 </property>
+                    <property name="text">
+                        <string>五边形</string>
+                    </property>
                 </widget>
                </item>
               </layout>
              </item>
-             <item>
-              <spacer name="verticalSpacer_8">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>40</height>
-                </size>
-               </property>
-              </spacer>
+                     </layout>
+                 </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_15">
-               <item>
-                <spacer name="horizontalSpacer_3">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <widget class="QPushButton" name="insertDataButton">
-                 <property name="font">
-                  <font>
-                   <pointsize>13</pointsize>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>输入数据</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="horizontalSpacer_6">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
+                 <layout class="QHBoxLayout" name="horizontalLayout_15">
+                     <item>
+                         <spacer name="horizontalSpacer_3">
+                             <property name="orientation">
+                                 <enum>Qt::Horizontal</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>40</width>
+                                     <height>20</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                     <item>
+                         <widget class="QPushButton" name="insertDataButton">
+                             <property name="font">
+                                 <font>
+                                     <family>Microsoft YaHei</family>
+                                     <pointsize>-1</pointsize>
+                                     <weight>50</weight>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                 </font>
+                             </property>
+                             <property name="text">
+                                 <string>输入数据</string>
+                             </property>
+                         </widget>
+                     </item>
+                     <item>
+                         <spacer name="horizontalSpacer_6">
+                             <property name="orientation">
+                                 <enum>Qt::Horizontal</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                                 <size>
+                                     <width>40</width>
+                                     <height>20</height>
+                                 </size>
+                             </property>
+                         </spacer>
+                     </item>
+                 </layout>
              </item>
-            </layout>
-           </widget>
-          </item>
-          <item>
-           <spacer name="verticalSpacer">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>40</height>
+             <item>
+                 <spacer name="verticalSpacer_8">
+                     <property name="orientation">
+                         <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                         <size>
+                             <width>20</width>
+                             <height>40</height>
+                         </size>
+                     </property>
+                 </spacer>
+             </item>
+             <item>
+                 <spacer name="verticalSpacer">
+                     <property name="orientation">
+                         <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                         <size>
+                             <width>20</width>
+                             <height>40</height>
              </size>
             </property>
            </spacer>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_8"/>
           </item>
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -967,9 +1236,13 @@
               <item>
                <widget class="QCheckBox" name="dataCheckBox">
                 <property name="font">
-                 <font>
-                  <pointsize>12</pointsize>
-                 </font>
+                    <font>
+                        <family>Microsoft YaHei</family>
+                        <pointsize>-1</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                    </font>
                 </property>
                 <property name="text">
                  <string>数据标签</string>
@@ -979,9 +1252,13 @@
               <item>
                <widget class="QCheckBox" name="fittingResCheckBox">
                 <property name="font">
-                 <font>
-                  <pointsize>12</pointsize>
-                 </font>
+                    <font>
+                        <family>Microsoft YaHei</family>
+                        <pointsize>-1</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                    </font>
                 </property>
                 <property name="text">
                  <string>拟合结果</string>
@@ -991,9 +1268,13 @@
               <item>
                <widget class="QCheckBox" name="axisTitleCheckBox">
                 <property name="font">
-                 <font>
-                  <pointsize>12</pointsize>
-                 </font>
+                    <font>
+                        <family>Microsoft YaHei</family>
+                        <pointsize>-1</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                    </font>
                 </property>
                 <property name="text">
                  <string>坐标轴标题</string>
@@ -1003,9 +1284,13 @@
               <item>
                <widget class="QCheckBox" name="gridCheckBox">
                 <property name="font">
-                 <font>
-                  <pointsize>12</pointsize>
-                 </font>
+                    <font>
+                        <family>Microsoft YaHei</family>
+                        <pointsize>-1</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                    </font>
                 </property>
                 <property name="text">
                  <string>网格线</string>
@@ -1021,9 +1306,13 @@
                 <item>
                  <widget class="QLabel" name="xAxisName">
                   <property name="font">
-                   <font>
-                    <pointsize>12</pointsize>
-                   </font>
+                      <font>
+                          <family>Microsoft YaHei</family>
+                          <pointsize>-1</pointsize>
+                          <weight>50</weight>
+                          <italic>false</italic>
+                          <bold>false</bold>
+                      </font>
                   </property>
                   <property name="text">
                    <string>x轴名称</string>
@@ -1043,9 +1332,13 @@
                 <item>
                  <widget class="QLabel" name="yAxisName">
                   <property name="font">
-                   <font>
-                    <pointsize>12</pointsize>
-                   </font>
+                      <font>
+                          <family>Microsoft YaHei</family>
+                          <pointsize>-1</pointsize>
+                          <weight>50</weight>
+                          <italic>false</italic>
+                          <bold>false</bold>
+                      </font>
                   </property>
                   <property name="text">
                    <string>y轴名称</string>
@@ -1084,20 +1377,26 @@
          </layout>
         </item>
         <item>
-         <widget class="QGraphicsView" name="graphicsView">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>8</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>500</width>
-            <height>600</height>
-           </size>
-          </property>
-         </widget>
+            <widget class="QGraphicsView" name="graphicsView">
+                <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>8</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>500</width>
+                        <height>550</height>
+                    </size>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>16777215</width>
+                        <height>830</height>
+                    </size>
+                </property>
+            </widget>
         </item>
        </layout>
       </item>
@@ -1107,22 +1406,23 @@
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1068</width>
-     <height>26</height>
-    </rect>
+       <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1094</width>
+           <height>27</height>
+       </rect>
    </property>
    <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>50</weight>
-     <italic>false</italic>
-     <bold>false</bold>
-     <underline>false</underline>
-     <kerning>true</kerning>
-    </font>
+       <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>-1</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+           <underline>false</underline>
+           <kerning>true</kerning>
+       </font>
    </property>
    <property name="defaultUp">
     <bool>false</bool>
@@ -1132,11 +1432,15 @@
    </property>
    <widget class="QMenu" name="menu">
     <property name="font">
-     <font>
-      <pointsize>9</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
+        <font>
+            <family>Microsoft YaHei</family>
+            <pointsize>-1</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+            <underline>false</underline>
+            <kerning>true</kerning>
+        </font>
     </property>
     <property name="title">
      <string>菜单</string>
@@ -1145,9 +1449,7 @@
      <bool>false</bool>
     </property>
     <addaction name="actionCreatNewFile"/>
-    <addaction name="actionOpenFile"/>
     <addaction name="separator"/>
-    <addaction name="actionSaveFile"/>
     <addaction name="actionSavePic"/>
     <addaction name="separator"/>
     <addaction name="actionLineFitting"/>
