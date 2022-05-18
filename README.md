@@ -14,23 +14,23 @@
 
 进入程序显示的界面：
 
-![image1](.\image\image1.png)
+![image1](./image/image1.png)
 
 输入数据后点击输入数据后：
 
-![image2](.\image\image2.png)
+![image2](./image/image2.png)
 
 添加图像格式后：
 
-![image3](.\image\image3.png)
+![image3](./image/image3.png)
 
 数据拟合效果：
 
-![image4](.\image\image4.png)
+![image4](./image/image4.png)
 
 x,y轴输入不合法的情况：
 
-![image4](.\image\image4.png)
+![image4](./image/image4.png)
 
 ## 2.代码实现
 
