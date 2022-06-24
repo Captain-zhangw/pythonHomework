@@ -3,7 +3,7 @@ import random
 import math
 
 
-# 作者：计201-42024048-张尉
+# 作者：Captainzw
 def paint():
     TREEX = -150
     TREEWIDTH = 45
