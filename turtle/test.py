@@ -79,11 +79,11 @@ painting.write('接龙完成', align='left', font=('宋体', 15))
 y = y - 50
 # 以下开始写学号姓名和班级
 painting.goto(x, y - 60)
-painting.write('张尉', align='left', font=('宋体', 15))
+painting.write('Captainzw', align='left', font=('宋体', 15))
 painting.goto(x, y - 90)
-painting.write('计201', align='left', font=('宋体', 15))
+painting.write('计20x', align='left', font=('宋体', 15))
 painting.goto(x, y - 120)
-painting.write('42024048', align='left', font=('宋体', 15))
+painting.write('42024xxx', align='left', font=('宋体', 15))
 # 以下绘制条形码
 x = painting.xcor() - 70
 y = painting.ycor() - 15
@@ -107,5 +107,5 @@ for i in numberlist:
 painting.penup()
 painting.goto(x + 50, y - txmwidth - 25)
 painting.pendown()
-painting.write("42024048", align='left', font=('宋体', 15))
+painting.write("42024xxx", align='left', font=('宋体', 15))
 painting.done()
